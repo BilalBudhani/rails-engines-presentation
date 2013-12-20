@@ -1,0 +1,138 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Rails Engines - A Presentation by @BilalBudhani</title>
+
+    <meta name="description" content="Rails Engines - A presentation by @BilalBudhani" />
+    <meta name="author" content="BilalBudhani" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="2">
+        <span class="try">by BilalBudhani</span>
+        <h1>Rails Engines<sup>*</sup></h1>
+        <span class="footnote">Mumbai Ruby meetup</span>
+    </div>
+
+    <div id="intro" class="step slide" data-x="-1000" data-y="-1500">
+        <h1>What are Rails Engines?</h1>
+        <p class="words">
+            A Rails Engine is a stand-alone Rails app that can be mounted by another Rails app. This is acheived largely through namespacing. Controllers and models in a Rails Engine are defined within modules of the engine’s namespace. Simlarly, assets specific to the engine are accessed in namespaced directories.
+        </p>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p><b>Benefits</b></p>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="-1500">
+        <ul class="words">
+            <li><strong>Resuablity:</strong> Engines are just gems, they can run inside any rails app with minilistic config required. They can easily be plugged and unplugged without hampering the parent app at all.</li>
+            <li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <ul class="words">
+            <li><strong>Seperate Tests:</strong> As apps grow, test suites can become unwieldy and take longer to run. With engines, test suites are broken apart and run faster. Because engines are isolated, you can be assured that changes to an engine wont affect other parts of your app.</li>
+            <li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="2000" data-y="-1500">
+        <ul class="words">
+            <li><strong>Quick Development:</strong> It’s easier for developers understand a single engine rather than needing to understand the entire app. Rampup time is shorter.</li>
+            <li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="3000" data-y="-1500">
+        <ul class="words">
+            <li><strong>SOA:</strong> SOA can be painful and it can actually take a while to implement them, especially when your code is tighly coupled. Whereas, Engines can serve the same purpose without the pain of monitoring even in the worst situations (Trust me, it does).
+            </li>
+            <li>
+        </ul>
+    </div>
+
+
+</div>
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+
+<!--
+
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+
+    Oh, you've already cloned the code from GitHub?
+
+    You have it open in text editor?
+
+    Stop right there!
+
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about
+    creating awesome and engaging presentations.
+
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+
+-->
+
+<!--
+
+    Are you still reading this?
+
+    For real?
+
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+
+    Cheers!
+
+-->
+

@@ -28,49 +28,76 @@
 </div>
 
 <div id="impress">
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="2">
-        <span class="try">by BilalBudhani</span>
-        <h1>Rails Engines<sup>*</sup></h1>
+    <div id="title" class="step" data-x="-1000" data-y="-1500" data-scale="2">
+        <span class="try" style="top: -1.5em;">by <a href="http://twitter.com/BilalBudhani">BilalBudhani</a></span>
+        <h1 style="font-size: 140px;">Rails Engines<sup>*</sup></h1>
         <span class="footnote">Mumbai Ruby meetup</span>
     </div>
 
-    <div id="intro" class="step slide" data-x="-1000" data-y="-1500">
+    <div id="problem" class="step slide" data-x="0" data-y="0">
+        <h1>The problem and our goal</h1>
+        <ul>
+            <li>Our spec was build a game which helps our customers to practice for their exams in competitive manner.</li>
+            <li>We were looking for an elegant yet fast approach to implement this without hampering the existing application.</li>
+            <li>Intially we thought of going with SOA but that comes with it own set of pains. Also, time to implement it is comparitively high.</li>
+            <li>Rails Engines was seems to be the right fit and perfect candidate for the situation.</li>
+        </ul>
+    </div>
+
+    <div id="intro" class="step slide" data-x="1000" data-y="0">
         <h1>What are Rails Engines?</h1>
         <p class="words">
             A Rails Engine is a stand-alone Rails app that can be mounted by another Rails app. This is acheived largely through namespacing. Controllers and models in a Rails Engine are defined within modules of the engine’s namespace. Simlarly, assets specific to the engine are accessed in namespaced directories.
         </p>
     </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+    <div id="big" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="6">
         <p><b>Benefits</b></p>
     </div>
 
-    <div class="step slide" data-x="0" data-y="-1500">
+    <div class="step slide" data-x="3500" data-y="2100" data-rotate="180">
         <ul class="words">
             <li><strong>Resuablity:</strong> Engines are just gems, they can run inside any rails app with minilistic config required. They can easily be plugged and unplugged without hampering the parent app at all.</li>
-            <li>
         </ul>
     </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
+    <div class="step slide" data-x="4500" data-y="2100" data-rotate="180">
         <ul class="words">
             <li><strong>Seperate Tests:</strong> As apps grow, test suites can become unwieldy and take longer to run. With engines, test suites are broken apart and run faster. Because engines are isolated, you can be assured that changes to an engine wont affect other parts of your app.</li>
-            <li>
         </ul>
     </div>
 
-    <div class="step slide" data-x="2000" data-y="-1500">
+    <div class="step slide" data-x="5500" data-y="2100" data-rotate="180">
         <ul class="words">
             <li><strong>Quick Development:</strong> It’s easier for developers understand a single engine rather than needing to understand the entire app. Rampup time is shorter.</li>
-            <li>
         </ul>
     </div>
 
-    <div class="step slide" data-x="3000" data-y="-1500">
+    <div class="step slide" data-x="6500" data-y="2100" data-rotate="180">
         <ul class="words">
             <li><strong>SOA:</strong> SOA can be painful and it can actually take a while to implement them, especially when your code is tighly coupled. Whereas, Engines can serve the same purpose without the pain of monitoring even in the worst situations (Trust me, it does).
             </li>
-            <li>
+        </ul>
+    </div>
+
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p>it is bit <b>hairy</b> (at times)*</p>
+    </div>
+
+    <div class="step slide" data-x="6500" data-y="3100">
+        <h1>FAKE, Fake and fake</h1>
+        <ul class="words">
+            <li>Fake Objects: Your engine will depend on certain objects and methods from parent app. Which will result in too much stubbing and data memic.</li>
+            <li>Shared views: Your engines may require some comman views from parent app. So, you've to be in sync always.</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="7500" data-y="3100">
+        <h1>Migrations</h1>
+        <ul class="words">
+            <li>As engines are application themself, so they require you to copy their migrations each time there's a change.</li>
+            <li>There's no upfront notification from rails that you're out of date in regards to engine's migrations.</li>
+            <li>Fortunately, PivotalLabs has a nice work around for this. Check it out <a href="http://pivotallabs.com/leave-your-migrations-in-your-rails-engines/">here</a>.</li>
         </ul>
     </div>
 

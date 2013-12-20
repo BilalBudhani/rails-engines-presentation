@@ -702,8 +702,22 @@ a:focus {
     for you.
 */
 
+h1 {
+    font-size: 45px;
+}
+
 .words {
     margin-top: 50px;
     font-size: 42px;
     line-height: 1.5em;
+}
+
+ul {
+    margin-top: 50px;
+    list-style: disc;
+    font-size: 35px;
+}
+
+ul li {
+    margin-top: 20px;
 }

@@ -35,20 +35,43 @@
     </div>
 
     <div id="problem" class="step slide" data-x="0" data-y="0">
-        <h1>The problem and our goal</h1>
-        <ul>
-            <li>Our spec was build a game which helps our customers to practice for their exams in competitive manner.</li>
-            <li>We were looking for an elegant yet fast approach to implement this without hampering the existing application.</li>
-            <li>Intially we thought of going with SOA but that comes with it own set of pains. Also, time to implement it is comparitively high.</li>
-            <li>Rails Engines was seems to be the right fit and perfect candidate for the situation.</li>
-        </ul>
+        <h1>Goal</h1>
+            <q>Real time multiplayer game for our customers.</q>
     </div>
 
-    <div id="intro" class="step slide" data-x="1000" data-y="0">
+    <div class="step slide" data-x="1000" data-y="0">
+        <h1>Problem</h1>
+            <q>Short Deadline.</q>
+    </div>
+
+    <div class="step slide" data-x="2000" data-y="0">
+        <q>10k~ lines of codebase w/o solid test coverage.</q>
+    </div>
+
+    <div class="step slide" data-x="3000" data-y="0">
+        <q>Let's explore the solutions</q>
+    </div>
+
+    <div class="step slide" data-x="4000" data-y="0">
+        <q>Bring your own talk and Discussions.</q>
+    </div>
+
+    <div class="step slide" data-x="5000" data-y="0">
+        <q>Initial candidate, Service Orientent Architecture.</q>
+    </div>
+
+    <div class="step slide" data-x="6000" data-y="0">
+        <q>Rails Engine.</q>
+    </div>
+
+    <div id="intro" class="step slide" data-x="7000" data-y="0">
         <h1>What are Rails Engines?</h1>
-        <p class="words">
-            A Rails Engine is a stand-alone Rails app that can be mounted by another Rails app. This is acheived largely through namespacing. Controllers and models in a Rails Engine are defined within modules of the engine’s namespace. Simlarly, assets specific to the engine are accessed in namespaced directories.
-        </p>
+        <ul>
+            <li>Stand-alone Rails app.</li>
+            <li>Gem itself.</li>
+            <li>First step towards SOA.</li>
+            <li>NameSpaced.</li>
+        </ul>
     </div>
 
     <div id="big" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="6">
@@ -56,28 +79,15 @@
     </div>
 
     <div class="step slide" data-x="3500" data-y="2100" data-rotate="180">
-        <ul class="words">
-            <li><strong>Resuablity:</strong> Engines are just gems, they can run inside any rails app with minilistic config required. They can easily be plugged and unplugged without hampering the parent app at all.</li>
-        </ul>
+            <q><strong>Resuablity</strong></q>
     </div>
 
     <div class="step slide" data-x="4500" data-y="2100" data-rotate="180">
-        <ul class="words">
-            <li><strong>Seperate Tests:</strong> As apps grow, test suites can become unwieldy and take longer to run. With engines, test suites are broken apart and run faster. Because engines are isolated, you can be assured that changes to an engine wont affect other parts of your app.</li>
-        </ul>
+            <q><strong>Seperate Tests</strong></q>
     </div>
 
     <div class="step slide" data-x="5500" data-y="2100" data-rotate="180">
-        <ul class="words">
-            <li><strong>Quick Development:</strong> It’s easier for developers understand a single engine rather than needing to understand the entire app. Rampup time is shorter.</li>
-        </ul>
-    </div>
-
-    <div class="step slide" data-x="6500" data-y="2100" data-rotate="180">
-        <ul class="words">
-            <li><strong>SOA:</strong> SOA can be painful and it can actually take a while to implement them, especially when your code is tighly coupled. Whereas, Engines can serve the same purpose without the pain of monitoring even in the worst situations (Trust me, it does).
-            </li>
-        </ul>
+            <q><strong>Quick Development</strong></q>
     </div>
 
     <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
@@ -85,23 +95,44 @@
     </div>
 
     <div class="step slide" data-x="6500" data-y="3100">
-        <h1>FAKE, Fake and fake</h1>
-        <ul class="words">
-            <li>Fake Objects: Your engine will depend on certain objects and methods from parent app. Which will result in too much stubbing and data memic.</li>
-            <li>Shared views: Your engines may require some comman views from parent app. So, you've to be in sync always.</li>
-        </ul>
+        <h1>MOCK, Mock and Mock</h1>
+        <q>
+            <strong>Mock Objects</strong>
+        </q>
     </div>
 
     <div class="step slide" data-x="7500" data-y="3100">
-        <h1>Migrations</h1>
-        <ul class="words">
-            <li>As engines are application themself, so they require you to copy their migrations each time there's a change.</li>
-            <li>There's no upfront notification from rails that you're out of date in regards to engine's migrations.</li>
-            <li>Fortunately, PivotalLabs has a nice work around for this. Check it out <a href="http://pivotallabs.com/leave-your-migrations-in-your-rails-engines/">here</a>.</li>
-        </ul>
+        <q>
+            <strong>Shared views</strong>
+        </q>
     </div>
 
+    <div class="step slide" data-x="8500" data-y="3100">
+        <q>
+            <strong>Engine specific Migrations</strong>
+        </q>
+    </div>
 
+    <div class="step slide" data-x="9500" data-y="3100">
+        <q>
+            <strong>Some Real World Examples</strong>
+        </q>
+    </div>
+
+    <div class="step slide" data-x="10500" data-y="3100">
+        <q>
+            <strong>Devise</strong>, <strong>Spree Commerce</strong> and <strong>Rails Engines</strong>
+        </q>
+    </div>
+
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <p>want to know more?</p>
+        <q>Then give it a shot, Luke!</q>
+    </div>
+
+    <div id="imagination" class="step" data-x="6100" data-y="4000" data-scale="6">
+        <p>Thank you and <b class="imagination">keep rubying</b>.</p>
+    </div>
 </div>
 <div class="hint">
     <p>Use a spacebar or arrow keys to navigate</p>
